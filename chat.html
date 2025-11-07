@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat app</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section class="flex-section1">
+      <div class="image-div1">
+        <img src="./yellowbg1.jpg" alt="PingFlow Chat" />
+        <div class="center-text">
+          <h2>Stay connected with Ping<span class="flow">Flow</span></h2>
+          <p>
+            Chat with friends instantly.<br />
+            Share messages, emojis, and updates in real-time.
+          </p>
+
+           <button id="logOut">Logout</button>
+        </div>
+      </div>
+      <!-- phone -->
+      <div class="phoneDiv">
+        <div class="phone2">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="app-logo1">
+              <i class="fa-solid fa-comments"></i>
+              <span>PingFlow App</span>
+            </div>
+            <div class="thiredMain-container">
+              <div id="chat-box"></div>
+              <input
+                type="text"
+                id="message"
+                name="message"
+                placeholder="Message"
+              />
+              <button id="send-btn">Send</button>
+              <!-- <button id="logOut">Logout</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+<div class="chat-container"> 
+        <h2>Realtime Chat</h2> 
+        <div id="messages" class="message-box"></div> 
+        <input type="text" id="username" placeholder="Enter your name"> 
+        <input type="text" id="message" placeholder="Type a message..."> 
+        <button onclick="sendMessage()">Send</button> 
+    </div>  -->
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+      <link rel="stylesheet" href="./style.css" />
+      
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<style>
+@media (max-width: 600px) {
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden; /* X & Y scroll complete off */
+  }
+
+  .flex-section {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .image-div {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .phone {
+    position: absolute;
+    left: 1.5%;
+    transform: translate(-50%, -50%) scale(0.85); /* phone center and smaller */
+   /* z-index: 10;  */
+   } 
+  }
+
+</style>
+
+<body>
+    <section class="flex-section">
+      <div class="image-div"><img src="./bgGirl1.png" /></div>
+ 
+
+    
+      <!-- phone -->
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="screen">
+          <div class="app-logo">
+            <i class="fa-solid fa-comments"></i>
+            <span>PingFlow App</span>
+          </div>
+          <div class="mainContainer">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+            <button id="signUp">SignUp</button>
+            <!-- <button id="login">Login</button> -->
+            <button id="google-btn" class="google">Continue with Google</button>
+            <p>
+              Use any email (Password > 8 characters). After signup/login you
+              will choose a username.
+            </p>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+    <script type="module" src="./app.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  
+  background: url("./bg1.jpg") center/cover no-repeat;
+  font-family: 'Poppins', sans-serif;
+  color: #f8f5f5;
+  overflow: hidden;
+  padding-bottom: 60px;
+
+}
+
+.navbar-container {
+  display: flex;
+  /* gap: 550px; */
+  justify-content: space-between;
+  width: 60%;
+  /* background-color: #9fe7ff; */
+  margin: 40px 0px 0px 50px;
+
+}
+
+ .logo  .logo-primary {
+    color: #1e293b;
+  }
+
+.logo  .flow {
+    color: #0098a6;
+  }
+
+.btnDiv .loginBtn {
+ 
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+background: #00bfff;
+    padding: 0.70rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+  min-width: 60px;
+  text-align: center;
+  border: none;
+  color: #fff;
+ 
+ 
+}
+
+.loginBtn  {
+  text-decoration: none;
+}
+
+/* hero description */
+
+.main {
+  margin: 80px 0px 0px 50px;
+  width: 50%;
+ 
+}
+
+.hero-line {
+  color: #1e293b;
+  font-size: 35px;
+  
+}
+
+.hero-para {
+  color: #4c4e52;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* chatgpt */
+.hero-buttons {
+  margin-top: 30px;
+
+}
+
+.hero-buttons .btn {
+  padding: 0.75rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  min-width: 150px;
+  text-align: center;
+  
+  
+}
+
+.btn.primary {
+  background: #00bfff;
+  color: #fff;
+  margin-right: 0.8rem;
+  display: inline-block; 
+   
+  
+}
+
+.btn.primary:hover {
+  background: #0098c7;
+}
+
+.btn.secondary {
+  border: 1px solid #00bfff;
+  color: #00bfff;
+}
+
+.btn.secondary:hover {
+  background: #00bfff;
+  color: #fff;
+}
+
+.terms {
+  font-size: 16px;
+  text-decoration: underline #00bfff;
+  color: #1e293b;
+  margin-top: 40px;
+  font-family: sans-serif;
+}
+
+/* footer */
+/* Footer Copyright UI */
+/* .site-footer {
+  background: linear-gradient(180deg, rgba(10,15,31,0.9), rgba(6,8,15,0.95));
+  color: #cfcfcf;
+  padding: 14px 20px;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  position: fixed;
+  /* top: 120px; */
+  /* z-index: 50; */
+  /* width: 100%;
+  margin-top: 120px; */
+  
+
+  .site-footer {
+  background: linear-gradient(180deg, rgba(10,15,31,0.9), rgba(6,8,15,0.95));
+  color: #cfcfcf;
+  padding: 14px 20px;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  position: fixed;
+  bottom: 0;         /* <-- Important */
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.footer-inner {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Copyright text */
+.copyright {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d7d7d7;
+  letter-spacing: 0.2px;
+}
+
+/* Footer links */
+.footer-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-link {
+  font-size: 0.9rem;
+  color: #9fe7ff;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 0.16s, color 0.16s, transform 0.12s;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  background: rgba(0,191,255,0.08);
+  color: #00bfff;
+  transform: translateY(-1px);
+  outline: none;
+}
+
+
+
+
+/* Responsive */
+
+/* Tablet (≤ 768px) */
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+
+  body {
+    height: auto;
+    overflow: auto;
+    background-position: center;
+   
+  }
+
+  .navbar-container {
+    /* gap: 40px; */
+    width: 70%;
+    margin: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main {
+    width: 70%;
+    margin: 60px auto 0 25px;
+  }
+
+  .hero-line {
+    font-size: 28px;
+  }
+
+  .hero-para {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .terms {
+    font-size: 14px;
+  }
+
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+
+   .navbar-container {
+    /* flex-direction: row;
+    gap: 12px; */
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #9fe7ff; */
+    margin: 20px;
+  }
+
+  .loginBtn {
+    font-size: 14px !important;
+    padding: 0.4rem 0.6rem !important;
+  } 
+
+  
+  .main {
+    width: 90%;
+    margin: 40px auto 0 auto;
+    text-align: left;
+  }
+
+  .hero-line {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .hero-para {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 80%;
+    padding: 0.9rem 1.4rem; /* dono same size */
+    text-align: center;
+    font-size: 15px;
+  }
+
+  /* .hero-buttons .btn {
+    width: 80%;
+    text-align: center;
+   
+  } */
+
+  .terms {
+    margin-top: 25px;
+    font-size: 13px;
+  }
+
+  /* Footer Adjustments */
+  .site-footer {
+    padding: 10px 12px;
+    margin-top: 80px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .footer-links {
+    gap: 6px;
+  }
+
+  .footer-link {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+}
+

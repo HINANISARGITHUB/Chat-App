@@ -1,0 +1,861 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body ,html {
+  margin: 0;
+
+  font-family: 'Poppins', sans-serif;
+  color: #f8f5f5;
+
+  overflow: hidden;
+}
+
+
+/* image */
+
+  .flex-section {
+  display: flex;
+  gap: 150px;
+ 
+} 
+.image-div {
+  max-width: 100%;
+  background-color: #047e69; 
+  
+ }  
+
+
+
+/* Main phone container */
+.phone {
+  width: 360px;
+  height: 500px;
+  border-radius: 35px;
+  background: linear-gradient(145deg, #a8e8ff, #ffe57e);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  position: relative;
+  top: 70px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  z-index: 1;
+  
+}
+
+@media (max-width:768px) {
+
+  .flex-section {
+
+    gap: 0px;
+  }
+
+  .image-div {
+    width: 0%;
+  }
+
+  .phone {
+  width: 360px;
+  height: 500px;
+  border-radius: 35px;
+  background: linear-gradient(145deg, #a8e8ff, #ffe57e);
+  border: 2px solid rgba(255,255,255,0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  position: relative;
+  top: 70px;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  z-index: 1;
+  margin: 10px auto auto auto;
+  
+}
+
+}
+
+/* user page */
+
+.userDiv {
+  width: 100%;
+  height: 100vh;
+  background: url("") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fbd324;
+  padding: 60px 50px;
+  gap: 40px;
+
+}
+
+
+/* Left Text */
+.user-firstDiv {
+  width: 50%;
+  color: #1e293b;
+  text-align: center;
+}
+
+.user-heading {
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+.flow {
+  color: #0098a6;
+}
+
+
+
+.user-firstDiv .user-para {
+  font-size: 18px;
+  line-height: 26px;
+  color: #808080;
+  font-weight: 400;
+}
+
+/* Right Phone Block */
+.user-secondDiv {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.phone1 {
+  width: 360px;
+  height: 300px;
+  border-radius: 35px;
+  background: linear-gradient(145deg, #a8e8ff, #ffe57e);
+  background-color: #00f0ff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  /* position: relative; */
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  z-index: 1;
+  /* margin-right: 450px; */
+}
+
+.phone1:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 80px rgba(255, 200, 100, 0.4);
+}
+
+.secondMain-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.secondMain-container input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #00a2ff;
+}
+
+#user-btn {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#user-btn:hover {
+  background-color: #1e40af;
+}
+
+
+/* responsive user page */
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+  .userDiv {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: 100vh;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .user-firstDiv,
+  .user-secondDiv {
+    width: 100%;
+  }
+
+  .user-heading {
+    font-size: 30px;
+  }
+
+  .user-firstDiv .user-para {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
+  .phone1 {
+    width: 360px;
+    height: 320px;
+    margin-top: 40px;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+
+  
+  .userDiv {
+    height: 100vh;
+    flex-direction: column;
+    padding: 30px 12px;
+    gap: 20px;
+  }
+
+  .user-heading {
+    font-size: 24px;
+  }
+
+  .user-firstDiv .user-para {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .phone {
+    width: 340px;
+    height: 500px;
+    border-radius: 35px;
+    background: linear-gradient(145deg, #a8e8ff, #ffe57e);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    position: relative;
+    top: 70px;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    z-index: 1;
+  }
+
+
+  .phone1 {
+    width: 340px;
+    height: 320px;
+    margin-top: 40px;
+  }
+
+  .app-logo1 {
+    font-size: 32px;
+  }
+
+  .user-name {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+}
+
+
+/* chat app container */
+.phone2 {
+  width: 400px;
+  height: auto;
+  border-radius: 35px;
+  background: linear-gradient(145deg, #a8e8ff, #ffe57e);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  z-index: 1;
+  /* margin-left: 150px;  */
+  margin-top: 50px;
+}
+
+.phone2:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 80px rgba(255, 200, 100, 0.4);
+}
+
+
+
+/* Top notch */
+.notch {
+  width: 70px;
+  height: 6px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff6ec7, #00f0c6, #00a2ff, #ff9a00);
+  margin: 15px auto;
+}
+
+/* Inner screen */
+.screen {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Form styling */
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #00a2ff;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Buttons */
+button {
+  width: 98%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6ec7, #00f0ff, #ff9a00);
+  background-size: 300% 300%;
+  box-shadow: 0 8px 25px rgba(255, 100, 255, 0.3);
+  transition: all 0.4s ease;
+  animation: gradientFlow 6s infinite alternate;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+button.google {
+  background: linear-gradient(135deg, #00ffcc, #00a2ff);
+  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+p {
+  text-align: center;
+  background: linear-gradient(90deg, #f00a97, #047e69, #054e79, #663f04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  margin-top: 18px;
+  line-height: 1.5;
+  animation: fadeIn 2s ease;
+}
+
+/* App Logo */
+.app-logo,
+.app-logo1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff6ec7, #00f0c6, #00a2ff, #ff9a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeSlide 1s ease;
+}
+
+.app-logo {
+  font-size: 1.5rem;
+}
+
+.app-logo1 {
+  font-size: 1.5rem;
+}
+
+.app-logo i,
+.app-logo1 i {
+  font-size: 2rem;
+  background: linear-gradient(90deg, #ff6ec7, #00f0ff, #ff9a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+  animation: pulseIcon 3s infinite ease-in-out;
+}
+
+@keyframes pulseIcon {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ✨ Animation Effects ✨ */
+.phone,
+.phone1,
+.phone2 {
+  animation: fadeZoomIn 1s ease forwards, floatPhone 6s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes floatPhone {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeZoomIn {
+  from {
+    transform: scale(0.9) translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.phone::before,
+.phone1::before,
+.phone2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 35px;
+  padding: 2px;
+  background-size: 1000% 1000%;
+  z-index: -1;
+  animation: borderFlow 6s linear infinite;
+  filter: blur(4px);
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+input:focus {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transition: 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+.app-logo,
+.app-logo1 {
+  animation: logoPulse 3s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  }
+
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+
+
+/* Message container of chat app chatting*/
+.message-container {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+/* Wrapper inside container */
+.message-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+
+
+.letter-circle {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, #ff6ec7, #00a2ff, #ff9a00);
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 1rem;
+  order: 0;
+  /* ensures circle stays left */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* subtle depth */
+  background-size: 300% 300%;
+  /* for animation if desired */
+  animation: gradientMove 5s ease infinite;
+  /* optional moving gradient */
+}
+
+/* Optional gradient animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Text wrapper */
+.message-wrapper .username {
+  font-weight: bold;
+  margin-bottom: 3px;
+  font-size: 0.9rem;
+  color: #00a2ff;
+  text-align: left;
+}
+
+.message-wrapper .message-text {
+  background: #F0E68C;
+  color: #1e293b;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 220px;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+}
+
+/* Sent messages (current user) */
+.message-container.sent {
+  justify-content: flex-end;
+}
+
+.message-container.sent .message-wrapper {
+  flex-direction: row;
+  /* keep circle left */
+  text-align: right;
+}
+
+.message-container.sent .message-wrapper .message-text {
+  background: #F8DE7E;
+  text-align: left;
+  color: #1e293b;
+}
+
+/* Received messages */
+.message-container.received {
+  justify-content: flex-start;
+}
+
+.message-container.received .message-wrapper {
+  flex-direction: row;
+  /* keep circle left */
+  text-align: left;
+}
+
+/* Buttons container */
+.btn-container {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+  /* pushes buttons to the right */
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Scrollable chat box */
+#chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+
+
+/* //////////////// chat app right image with text ///////////////////////*/
+
+
+.flex-section1 {
+  display: flex;
+ 
+}
+
+/* Image container */
+ .image-div1 { 
+   position: relative; 
+     /* width: 100%;   */
+    /* max-width: 900px; */
+   /* margin: auto;   */
+}
+
+/* Background image */
+
+
+/* Centered text overlay */
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  max-width: 50%;
+  z-index: 2;
+}
+
+.center-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #1e293b;
+}
+
+.center-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Phone mockup */
+.phoneDiv {
+  z-index: 3;
+  margin-left: 150px;
+
+}
+
+
+/* ////////////  responsiveness of chatting mobile app ///////////////// */
+/* ✅ Tablet */
+@media (max-width: 768px) {
+
+  .phone2 {
+    width: 400px;
+    height: auto;
+    border-radius: 35px;
+    background: linear-gradient(145deg, #a8e8ff, #ffe57e);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    z-index: 1;
+   
+    margin-bottom: 150px;
+  }
+
+  .flex-section1 {
+    flex-direction: row;
+    z-index: 5;
+  }
+
+  .image-div1 {
+    width: 100%;
+    display: flex;
+    min-height: 200px;
+  }
+
+  .image-div1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .center-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    max-width: 50%;
+  
+  }
+
+  .center-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    color: #1e293b;
+    margin-top: 150px;
+  }
+
+
+  .phoneDiv,
+  .phone2 {
+    margin: 0 auto !important;
+    width: 350px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 600px) {
+ body , html{
+    overflow: auto !important; /* ✅ Scroll wapas start */
+  }
+  
+  .flex-section1 {
+    flex-direction: column;
+    gap: 25px;
+    /* padding: 20px 10px; */
+  }
+
+  /* .center-text {
+    margin-top: 0px;
+  } */
+
+  .center-text h2 {
+    font-size: 1.4rem;
+
+  }
+
+  .center-text p {
+    font-size: 0.9rem;
+  }
+
+  .phoneDiv,
+  .phone2 {
+    width: 320px !important;
+    margin: 0 auto;
+  }
+
+
+  .screen {
+    padding: 15px;
+  }
+
+  .message-wrapper .message-text {
+  background: #F0E68C;
+  color: #1e293b;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 200px;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+}
+
+  /* input,
+  button {
+    font-size: 0.85rem;
+    padding: 10px;
+  } */
+}
