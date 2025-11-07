@@ -32,10 +32,17 @@
     const password = document.getElementById('password').value;
 
     createUserWithEmailAndPassword(auth, email, password)
+    // .then(() => {
+    //   // alert('signUp sucessfully');
+    //   window.location.href = 'user.html'
+    // })
+
+     .then(() => {
+    swal('Congratulation' , 'SignUp Successfully' , 'success')
     .then(() => {
-      alert('signUp sucessfully');
-      window.location.href = 'user.html'
-    })
+      window.location.href = 'user.html';
+    });
+  })
 
     .catch((error) => {
       alert(error.message)
@@ -51,10 +58,17 @@
     const password = document.getElementById('password').value;
 
     signInWithEmailAndPassword(auth, email, password)
+    // .then(() => {
+    //   alert('login sucessfully');
+    //   window.location.href = 'user.html'
+    // })
+
+      .then(() => {
+    swal('Congratulation' , 'login Successfully' , 'success')
     .then(() => {
-      alert('login sucessfully');
-      window.location.href = 'user.html'
-    })
+      window.location.href = 'user.html';
+    });
+  })
 
     .catch((error) => {
       alert(error.message)
@@ -78,9 +92,16 @@
 // signout
 document.getElementById('logOut')?.addEventListener('click', () => {
   signOut(auth)
-  .then(() => {
-    alert('logout successfully')
-    window.location.href = 'index.html'
+  // .then(() => {
+  //   alert('logout successfully')
+  //   window.location.href = 'index.html'
+  // })
+
+   .then(() => {
+    swal('Go to Home Page', 'logout Successfully')
+    .then(() => {
+      window.location.href = 'index.html';
+    });
   })
 
   .catch((error) => {
