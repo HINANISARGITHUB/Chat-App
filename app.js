@@ -98,7 +98,7 @@ document.getElementById('logOut')?.addEventListener('click', () => {
   // })
 
    .then(() => {
-    swal('Go to Home Page', 'logout Successfully')
+    swal('Go to Home Page', 'logout')
     .then(() => {
       window.location.href = 'index.html';
     });
