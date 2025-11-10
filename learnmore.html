@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pingflow learnmore</title>
+    <link rel="stylesheet" href="./learnmore.css" />
+  </head>
+  <body>
+    <header class="top">
+      <h1 class="brand">Ping<span class="flow">Flow</span></h1>
+      <button id="backBtn" class="back">← Back</button>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Stay connected. Move faster.</h2>
+        <p>
+          PingFlow connects friends and teams instantly — messaging, emojis, and
+          real-time updates in a simple, beautiful app.
+        </p>
+        <a href="#features" class="cta">See features ↓</a>
+      </section>
+
+      <section id="features" class="features">
+        <article class="feature">
+          <h3>Real-time Chat</h3>
+          <p>Messages delivered instantly with sleek UI and emoji support.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Easy Media Sharing</h3>
+          <p>Share pictures and links with previews — fast and reliable.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Secure & Simple</h3>
+          <p>Built with authentication and a clean, friendly interface.</p>
+        </article>
+      </section>
+
+      <section class="how">
+        <h3>How to start</h3>
+        <ol>
+          <li>Sign up or login</li>
+          <li>Create or join a chat</li>
+          <li>Start messaging — enjoy realtime updates</li>
+        </ol>
+      </section>
+
+      <section class="footer-cta">
+        <p>Ready to chat?</p>
+        <button id="openIndex" class="primary">Open Home</button>
+      </section>
+    </main>
+
+    <script>
+      // back button goes to index.html
+      document.getElementById("backBtn").addEventListener("click", () => {
+        // prefer explicit index.html as requested
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>

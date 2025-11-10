@@ -175,14 +175,11 @@ function createMessageElement(data, messageId, currentUsername) {
     editBtn.addEventListener("click", () =>
       editMessage(messageId, container, data.message)
     );
-
-    const delBtn = document.createElement("span");
-    delBtn.textContent = "🗑️";
-    delBtn.classList.add("delete-icon");
-    delBtn.title = "Delete message";
-    delBtn.addEventListener("click", () => {
-      if (confirm("Delete this message?")) deleteMessage(messageId, container);
-    });
+const delBtn = document.createElement("span");
+delBtn.textContent = "🗑️";
+delBtn.classList.add("delete-icon");
+delBtn.title = "Delete message";
+delBtn.addEventListener("click", () => deleteMessage(messageId, container));
 
     btnContainer.appendChild(editBtn);
     btnContainer.appendChild(delBtn);
@@ -221,20 +218,100 @@ window.sendMessage = function () {
 document.getElementById("send-btn").addEventListener("click", sendMessage);
 
 // ✅ Delete Message
-function deleteMessage(messageId, messageElement) {
-  remove(ref(db, `messages/${messageId}`))
-    .then(() => messageElement.remove())
-    .catch((error) => alert("Error deleting message: " + error.message));
+// function deleteMessage(messageId, messageElement) {
+//   remove(ref(db, `messages/${messageId}`))
+//     .then(() => messageElement.remove())
+//     .catch((error) => alert("Error deleting message: " + error.message));
+// }
+
+function deleteMessage(id, el) {
+  swal({
+    title: "Are you sure?",
+    text: "Do you really want to delete this message?",
+    icon: "warning",
+    buttons: ["Cancel", "Delete"],
+    dangerMode: true,
+  }).then((ok) => {
+    if (ok) {
+      remove(ref(db, `messages/${id}`))
+        .then(() => {
+          el.remove();
+          swal("Deleted!", "Your message has been deleted.", "success");
+        })
+        .catch(err => swal("Error!", err.message, "error"));
+    }
+  });
 }
 
+
+
+
+
+
 // ✅ Edit Message
+// function editMessage(messageId, messageElement, oldText) {
+//   const newText = prompt("Edit your message:", oldText);
+//   if (newText && newText.trim() !== "") {
+//     update(ref(db, `messages/${messageId}`), { message: newText })
+//       .then(() => {
+//         messageElement.querySelector(".message-text").textContent = newText;
+//       })
+//       .catch((error) => alert("Error updating message: " + error.message));
+//   }
+// }
+
+
+// function editMessage(messageId, messageElement, oldText) {
+//   swal("Edit your message:", {
+//     content: "input",
+//     buttons: ["Cancel", "Edit"],
+//   }).then((newText) => {
+//     if (newText && newText.trim() !== "") {
+//       update(ref(db, `messages/${messageId}`), { message: newText })
+//         .then(() => {
+//           messageElement.querySelector(".message-text").textContent = newText;
+//           swal("Updated!", "Your message has been edited.", "success");
+//         })
+//         .catch((error) => {
+//           swal("Error", "Error updating message: " + error.message, "error");
+//         });
+//     }
+//   });
+// }
+
 function editMessage(messageId, messageElement, oldText) {
-  const newText = prompt("Edit your message:", oldText);
-  if (newText && newText.trim() !== "") {
-    update(ref(db, `messages/${messageId}`), { message: newText })
-      .then(() => {
-        messageElement.querySelector(".message-text").textContent = newText;
-      })
-      .catch((error) => alert("Error updating message: " + error.message));
-  }
+  swal("Edit your message:", {
+    content: {
+      element: "input",
+      attributes: {
+        value: oldText,
+        placeholder: "Type new message",
+      },
+    },
+    buttons: ["Cancel", "Update"],
+  }).then((newText) => {
+    if (newText && newText.trim() !== "") {
+      update(ref(db, `messages/${messageId}`), { message: newText })
+        .then(() => {
+          // update message immediately
+          messageElement.querySelector(".message-text").textContent = newText;
+
+          // show small swal near the message
+          const success = document.createElement("span");
+          // success.textContent = " ✓ Updated";
+          success.style.color = "green";
+          success.style.marginLeft = "8px";
+          success.style.fontSize = "13px";
+
+          messageElement.appendChild(success);
+
+          // remove after 1.5s
+          setTimeout(() => success.remove(), 1500);
+        })
+        .catch((error) => {
+          swal("Error", "Error updating message: " + error.message, "error");
+        });
+    }
+  });
 }
+
